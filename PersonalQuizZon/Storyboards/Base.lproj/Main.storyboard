@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Introduction View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PersonalQuizZon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="PersonalQuizZon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
         <!--Вопрос №-->
         <scene sceneID="5IS-le-SoL">
             <objects>
-                <viewController id="OEY-Cz-ARz" sceneMemberID="viewController">
+                <viewController id="OEY-Cz-ARz" customClass="QuestionsViewController" customModule="PersonalQuizZon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RKc-4u-V9I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,7 +252,7 @@
         <!--Результаты-->
         <scene sceneID="QCm-eu-Wfg">
             <objects>
-                <viewController id="CMk-3s-61A" sceneMemberID="viewController">
+                <viewController id="CMk-3s-61A" customClass="ResultsViewController" customModule="PersonalQuizZon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mkZ-sN-Ekb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,9 +283,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cLN-XE-2qp"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Результаты" id="eru-Ej-V27"/>
+                    <navigationItem key="navigationItem" title="Результаты" id="eru-Ej-V27">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kCe-Qk-H9P">
+                            <connections>
+                                <segue destination="nz7-ol-pR4" kind="unwind" unwindAction="unwindFor:" id="SDv-2e-jC8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIk-Mg-1uk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nz7-ol-pR4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2323.125" y="111.97183098591549"/>
         </scene>
