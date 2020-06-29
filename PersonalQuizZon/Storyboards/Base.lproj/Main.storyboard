@@ -98,13 +98,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="nCL-kW-gWe">
                                         <rect key="frame" x="0.0" y="66" width="280" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4me-F5-06U">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4me-F5-06U">
                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQa-YW-w7R">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQa-YW-w7R">
                                                 <rect key="frame" x="238" y="0.0" width="42" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -207,9 +207,9 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TKb-xT-ZBP">
                                 <rect key="frame" x="0.0" y="91" width="320" height="2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unz-en-52G">
-                                <rect key="frame" x="20" y="101" width="280" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Unz-en-52G" userLabel="Question Label">
+                                <rect key="frame" x="20" y="101" width="280" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -242,6 +242,28 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="multipleStackView" destination="f8I-G7-mig" id="5mj-7v-Tir"/>
+                        <outlet property="questionLabel" destination="Unz-en-52G" id="Nyg-v4-OcP"/>
+                        <outlet property="questionProgressView" destination="TKb-xT-ZBP" id="KfY-II-FZc"/>
+                        <outlet property="rangedSlider" destination="PRx-od-j7Y" id="OnJ-jb-hee"/>
+                        <outlet property="rangedStackView" destination="d2g-e8-vDW" id="2ET-0l-wF8"/>
+                        <outlet property="singleStackView" destination="ClB-IH-Xqa" id="KwS-a1-fUQ"/>
+                        <outletCollection property="singleButtons" destination="73K-PW-g0y" collectionClass="NSMutableArray" id="kMZ-OC-t8K"/>
+                        <outletCollection property="singleButtons" destination="H0o-Mv-HHQ" collectionClass="NSMutableArray" id="X7D-ip-aSW"/>
+                        <outletCollection property="singleButtons" destination="H0o-Mv-HHQ" collectionClass="NSMutableArray" id="wuy-gC-9xP"/>
+                        <outletCollection property="singleButtons" destination="So4-Di-XmA" collectionClass="NSMutableArray" id="U5b-1C-WOi"/>
+                        <outletCollection property="singleButtons" destination="bCI-bC-yif" collectionClass="NSMutableArray" id="bnJ-j1-fEJ"/>
+                        <outletCollection property="multipleLabels" destination="zjN-bG-U5c" collectionClass="NSMutableArray" id="Fyu-UB-mkG"/>
+                        <outletCollection property="multipleSwitches" destination="gkR-w6-l12" collectionClass="NSMutableArray" id="hm9-5Y-YGH"/>
+                        <outletCollection property="multipleLabels" destination="aPI-5Z-EVK" collectionClass="NSMutableArray" id="4KC-Zx-WCa"/>
+                        <outletCollection property="multipleLabels" destination="oUg-fe-S83" collectionClass="NSMutableArray" id="K2T-JH-Gc3"/>
+                        <outletCollection property="multipleLabels" destination="HFr-VY-aQW" collectionClass="NSMutableArray" id="Wks-AZ-jRN"/>
+                        <outletCollection property="multipleSwitches" destination="LpQ-Ea-hfV" collectionClass="NSMutableArray" id="Sjd-Tw-UsJ"/>
+                        <outletCollection property="multipleSwitches" destination="zyi-fR-03W" collectionClass="NSMutableArray" id="jdr-AT-z3j"/>
+                        <outletCollection property="multipleSwitches" destination="N45-JV-nMO" collectionClass="NSMutableArray" id="8YD-DR-Idv"/>
+                        <outletCollection property="rangedLabels" destination="4me-F5-06U" collectionClass="NSMutableArray" id="DDz-e9-5TQ"/>
+                        <outletCollection property="rangedLabels" destination="hQa-YW-w7R" collectionClass="NSMutableArray" id="h6D-76-Xns"/>
+                        <outletCollection property="rangedLabels" destination="hQa-YW-w7R" collectionClass="NSMutableArray" id="NXq-nB-Z1p"/>
                         <segue destination="CMk-3s-61A" kind="show" identifier="resultSegue" id="uhI-Ic-wYB"/>
                     </connections>
                 </viewController>
